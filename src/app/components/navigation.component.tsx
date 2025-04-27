@@ -20,7 +20,7 @@ export default function NavigationComponent() : ReactNode {
 						<a href="#" className="navigation-link">Mes projets</a>
 					</li>
 					<li className="navigation-item">
-						<a href="#" className="navigation-link">Me contacter</a>
+						<a href="#__contact_form" className="navigation-link">Me contacter</a>
 					</li>
         </ul>
 			</div>

@@ -29,8 +29,8 @@ export default function HomePage() : ReactNode {
 					</div>
 
 					<div className="cta-box">
-						<a href="#" className="btn cta primary">
-							Découvre mes services
+						<a href="#" className="btn cta primary btn-disabled">
+							Prestations bientôt disponibles !
 						</a>
 					</div>
 				</div>

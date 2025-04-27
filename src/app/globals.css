@@ -18,7 +18,14 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  background-color: var(--primary-color);
+  width: 100vw;
+  box-sizing: content-box;
 }
 
 p, span, ul, li, a, label, button, label, input, select, textarea {
@@ -57,11 +64,11 @@ input, select, textarea, label {
   }
 
   &.send {
-    @apply flex w-fit px-9 py-5 text-white transition-colors;
+    @apply flex w-fit px-9 py-4 text-white transition-colors;
     font-family: "Avenir Next", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 14px;
 
     background: var(--tier-color-75);
     border-radius: var(--default-radius);
@@ -73,5 +80,9 @@ input, select, textarea, label {
       -webkit-box-shadow: 0 0 30px 0 var(--tier-color);
       box-shadow: 0 0 30px 0 var(--secondary-color);
     }
+  }
+
+  &.btn-disabled {
+    @apply cursor-not-allowed;
   }
 }
