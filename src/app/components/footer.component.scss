@@ -1,0 +1,42 @@
+@use "tailwindcss";
+
+.adev-footer-block {
+  @apply flex flex-col px-12 pb-2 pt-6;
+  background: var(--primary-color-75);
+
+  .footer-links-container {
+    @apply flex flex-col md:flex-row gap-6 justify-evenly mb-6;
+
+    .links-list {
+      @apply flex flex-col text-white;
+
+      .link-title {
+        font-family: "Avenir Next", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 18px !important;
+      }
+
+      .link-item {
+        .link-go {
+          font-family: "Avenir Next", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 16px !important;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    @apply text-white text-sm font-semibold text-center;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,95 @@
+@use "tailwindcss";
+
+.adev-body-block {
+  background-image: url("/images/home-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  @apply flex flex-col min-h-screen px-8 md:px-36;
+  min-height: 100vh;
+  overflow-y: scroll;
+
+  .header-block {
+    @apply flex md:flex-row flex-col gap-12 justify-between relative mb-20;
+
+    .header-spacer {
+      @apply flex flex-col;
+
+      .header-text {
+        @apply text-white font-bold text-4xl mb-20 z-10;
+        font-family: "KoHo", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        .h-t-p1 {
+          @apply mb-12;
+          font-size: 32px;
+        }
+
+        .h-t-p2 {
+          font-size: 64px;
+        }
+
+        .h-bt-txt {
+          @apply mt-4;
+
+          .h-bt-st {
+            font-size: 64px;
+            font-weight: bold;
+          }
+
+          .h-bt-smt {
+            @apply block mt-3;
+            font-size: 40px;
+          }
+        }
+      }
+
+      .cta-box {
+        @apply mx-auto md:mx-0 z-10;
+      }
+    }
+
+    .header-image-block {
+      @apply absolute md:relative w-fit opacity-50 md:opacity-100;
+
+      .header-image {
+        @apply w-full h-full object-cover;
+      }
+    }
+  }
+
+  .home-page-container {
+    @apply flex flex-col w-full;
+
+    .services-list {
+      @apply flex flex-col items-center md:flex-row gap-6 md:gap-18 p-4 mb-20 justify-between w-full;
+
+      .service-item {
+        @apply flex flex-col flex-1 items-center justify-center w-fit h-fit mb-12 p-2 text-white;
+        -webkit-box-shadow: 0 0 20px 0 var(--secondary-color);
+        box-shadow: 0 0 20px 0 var(--secondary-color);
+        border-radius: var(--default-radius);
+
+        .service-title {
+          @apply text-center mb-6 p-2;
+
+          font-family: "KoHo", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          font-size: 32px;
+        }
+
+        .service-description {
+          @apply text-center p-2 pt-0 pb-8;
+          font-family: "Avenir Next", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

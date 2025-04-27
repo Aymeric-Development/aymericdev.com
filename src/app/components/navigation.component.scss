@@ -1,0 +1,45 @@
+@use "tailwindcss";
+
+.adev-navigation-block {
+  @apply flex flex-col md:flex-row justify-between mx-4 md:mx-12 py-2 items-center mb-24;
+
+  .navigation-spacer {
+    .navigation-logo {
+      @apply w-52 mt-6 md:mt-0;
+
+      .web-logo {
+        @apply w-full h-full;
+      }
+    }
+
+    .navigation-menu {
+      @apply hidden md:flex md:gap-6;
+
+      .navigation-item {
+        @apply text-white;
+
+        .navigation-link {
+          @apply relative overflow-hidden px-8 py-2 text-sm;
+          font-family: "KoHo", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 24px;
+
+          &::before {
+            @apply absolute inset-0 bg-white opacity-5;
+            content: "";
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            border-radius: 8px;
+          }
+
+          &:hover::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+  }
+}

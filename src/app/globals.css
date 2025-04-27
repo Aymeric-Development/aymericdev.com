@@ -1,26 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --secondary-color: rgb(76, 17, 169);
+  --secondary-color-75: rgba(76, 17, 169, 0.75);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --tier-color: rgb(47, 39, 79);
+  --tier-color-75: rgba(47, 39, 79, 0.75);
 
+  --primary-color: rgb(17, 17, 49);
+  --primary-color-75: rgba(17, 17, 49, 0.75);
+
+  --default-radius: 18px;
+}
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+p, span, ul, li, a, label, button, label, input, select, textarea {
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
+input, select, textarea, label {
+  @apply text-sm;
+}
+
+.btn {
+  @apply cursor-pointer;
+
+  &.cta {
+    @apply flex w-fit px-8 py-6 text-white transition-colors;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+
+    &.primary {
+      background: var(--tier-color-75);
+      border-radius: var(--default-radius);
+      -webkit-box-shadow: 0 0 10px 0 var(--tier-color-75);
+      box-shadow: 0 0 10px 0 var(--tier-color-75);
+
+      &:hover {
+        background: var(--secondary-color);
+        -webkit-box-shadow: 0 0 30px 0 var(--tier-color);
+        box-shadow: 0 0 30px 0 var(--secondary-color);
+      }
+    }
+  }
+
+  &.send {
+    @apply flex w-fit px-9 py-5 text-white transition-colors;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+
+    background: var(--tier-color-75);
+    border-radius: var(--default-radius);
+    -webkit-box-shadow: 0 0 10px 0 var(--tier-color-75);
+    box-shadow: 0 0 10px 0 var(--tier-color-75);
+
+    &:hover {
+      background: var(--secondary-color);
+      -webkit-box-shadow: 0 0 30px 0 var(--tier-color);
+      box-shadow: 0 0 30px 0 var(--secondary-color);
+    }
+  }
 }
