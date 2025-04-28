@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
+@import "@flaticon/flaticon-uicons/css/all/all.css";
 
 :root {
   --secondary-color: rgb(76, 17, 169);
@@ -7,6 +8,7 @@
 
   --tier-color: rgb(47, 39, 79);
   --tier-color-75: rgba(47, 39, 79, 0.75);
+  --tier-color-95: rgba(47, 39, 79, 0.98);
 
   --primary-color: rgb(17, 17, 49);
   --primary-color-75: rgba(17, 17, 49, 0.75);

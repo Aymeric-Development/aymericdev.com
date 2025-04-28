@@ -1,7 +1,7 @@
 @use "tailwindcss";
 
 .adev-footer-block {
-  @apply flex flex-col px-12 pb-2 pt-6;
+  @apply flex flex-col px-12 pb-2 pt-6 mt-12;
   background: var(--primary-color-75);
 
   .footer-links-container {

@@ -7,12 +7,12 @@
 }
 
 .main-container {
-  @apply flex flex-col min-h-screen px-8 md:px-36;
+  @apply flex flex-col min-h-screen px-8 md:px-36 items-center lg:items-stretch;
   min-height: 100vh;
   overflow-y: scroll;
 
   .header-block {
-    @apply flex md:flex-row flex-col gap-12 justify-between relative mb-20;
+    @apply flex lg:flex-row flex-col gap-12 justify-between relative mb-20;
 
     .header-spacer {
       @apply flex flex-col;
@@ -53,7 +53,7 @@
     }
 
     .header-image-block {
-      @apply absolute md:relative w-fit opacity-50 md:opacity-100;
+      @apply absolute lg:relative w-fit opacity-50 md:opacity-100;
 
       .header-image {
         @apply w-full h-full object-cover;
@@ -65,10 +65,10 @@
     @apply flex flex-col w-full;
 
     .services-list {
-      @apply flex flex-col items-center md:flex-row gap-6 md:gap-18 p-4 mb-20 justify-between w-full;
+      @apply flex flex-col items-center lg:flex-row gap-6 md:gap-18 p-4 mb-20 justify-between w-full;
 
       .service-item {
-        @apply flex flex-col flex-1 items-center justify-center w-fit h-fit mb-12 p-2 text-white;
+        @apply flex flex-col flex-1 w-full items-center justify-center w-fit h-fit mb-12 p-2 text-white;
         -webkit-box-shadow: 0 0 20px 0 var(--secondary-color);
         box-shadow: 0 0 20px 0 var(--secondary-color);
         border-radius: var(--default-radius);

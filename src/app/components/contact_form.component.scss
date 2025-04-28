@@ -1,6 +1,6 @@
 @import "tailwindcss";
 .form-block {
-  @apply flex flex-col p-4 md:p-12 mb-12;
+  @apply flex flex-col p-4 md:p-12;
   border-radius: var(--default-radius);
   background: var(--primary-color-75);
 
