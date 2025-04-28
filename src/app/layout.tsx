@@ -61,7 +61,22 @@ export const metadata: Metadata = {
     "freelance développeur Vue",
     "freelance développeur Node.js",
     "freelance développeur PHP",
-  ]
+    "France",
+    "Paris",
+    "Bordeaux",
+    "Toulouse",
+    "Haute-Vienne",
+    "Limousin",
+    "Limoges"
+  ],
+  robots: "index, follow",
+  applicationName: "Aymericdev'",
+  authors: [{
+    name: "Aymeric Leger Achard",
+    url: "https://aymericdev.com",
+  }],
+  icons: "/images/favicon-16x16.png",
+  publisher: "Aymeric Leger Achard",
 };
 
 export default function RootLayout({
