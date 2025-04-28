@@ -30,7 +30,7 @@ export default function ContactFormComponent(): ReactNode {
     let isValid = true;
 
     if (!formState.name.trim().length || formState.name.length < 5) {
-      errors.name = "Votre nom et prénom doivent faire au moins 5 caractères";
+      errors.name = "Ton nom et prénom doivent faire au moins 5 caractères";
       isValid = false;
     } else {
       errors.name = "";
@@ -40,7 +40,7 @@ export default function ContactFormComponent(): ReactNode {
       !formState.email.trim().length ||
       !/\S+@\S+\.\S+/.test(formState.email)
     ) {
-      errors.email = "Votre email doit être valide";
+      errors.email = "Ton email doit être valide";
       isValid = false;
     } else {
       errors.email = "";
@@ -62,7 +62,7 @@ export default function ContactFormComponent(): ReactNode {
       !formState.message.trim().length ||
       formState.message.length < 20
     ) {
-      errors.message = "Votre message doit avoir au moins 20 caractères";
+      errors.message = "Ton message doit avoir au moins 20 caractères";
       isValid = false;
     } else {
       errors.message = "";
@@ -116,7 +116,7 @@ export default function ContactFormComponent(): ReactNode {
           setFormGlobalError("Il y a eu un problème lors de l'envoi de ta fusée. Essaie de relancer les moteurs !");
         }
       } catch {
-        setFormGlobalError("Il y a eu un problème lors de l'envoi de ta fusée. Essaie de relancer les moteurs !");
+        setFormGlobalError("Il y a eu un problème lors de l'envoi de ta fusée.");
       } finally {
         setIsSubmitting(false);
       }
